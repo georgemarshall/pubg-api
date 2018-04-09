@@ -107,21 +107,6 @@ resource!(Roster, |&self| {
     has_many participants;
 });
 
-#[derive(Debug, Serialize, Deserialize)]
-#[serde(rename_all = "kebab-case", deny_unknown_fields)]
-pub struct Status {
-    id: String,
-    /// releasedAt
-    released_at: DateTime<Utc>,
-    /// version
-    version: String,
-}
-resource!(Status, |&self| {
-    kind "status";
-    id self.id;
-    attrs released_at, version;
-});
-
 //////////////////////
 // Supporting Types //
 //////////////////////
