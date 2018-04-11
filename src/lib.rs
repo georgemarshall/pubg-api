@@ -19,6 +19,7 @@ mod events;
 mod json_uuid;
 mod models;
 pub mod status;
+pub mod telemetry;
 
 use failure::{Error, SyncFailure};
 use futures::prelude::*;
